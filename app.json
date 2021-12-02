@@ -17,13 +17,23 @@
       "**/*"
     ],
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "infoPlist": {
+        "NSLocationAlwaysAndWhenInUseUsageDescription": "Location Always And When In Usage",
+        "UIBackgroundModes": [
+          "location",
+          "fetch",
+          "remote-notification"
+        ]
+      }
     },
     "android": {
+      "permissions":["USE_FINGERPRINT", "RECEIVE_BOOT_COMPLETED", "LOCATION", "ACCESS_COARSE_LOCATION", "ACCESS_FINE_LOCATION", "WAKE_LOCK", "FOREGROUND_SERVICE", "ACCESS_BACKGROUND_LOCATION", "BIND_NOTIFICATION_LISTENER_SERVICE"],
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.lrcdeveloper.geofenceapp"
     },
     "web": {
       "favicon": "./assets/favicon.png"
